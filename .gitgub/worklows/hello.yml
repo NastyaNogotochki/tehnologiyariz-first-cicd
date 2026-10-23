@@ -1,10 +1,13 @@
-name: Мой первый workflow
- on: 
-   push:
-     jobs:
-       build:
-         runs-on: ubuntu-latest
-          steps:
-           - uses: actions/checkout@v4
-            - name: Запустить команду
-               run: echo "Привет! Я только что запустил CI!"
+name: First CI
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Hello
+        run: echo "Hello World!"
