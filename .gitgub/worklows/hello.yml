@@ -1,5 +1,6 @@
 name: Мой первый workflow
-on: [push]
+on: 
+  push:
 
 jobs:
   build:
